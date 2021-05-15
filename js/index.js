@@ -16,7 +16,6 @@ window.ready = jQuery(function ($) {
     //calendarid
     let calendaridnum = settingarry.indexOf("2.選擇要得行事曆:") + 1;
     mycalendarId = settingarry[calendaridnum];
-    console.log(mycalendarId);
     //get id apikey
     $('#eventlist').gCalReader({
 
