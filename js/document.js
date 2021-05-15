@@ -58,7 +58,7 @@ function loadDoc() {
         document.getElementById('Information ' + 2).innerHTML = Infocontent.join(' ');
     });
     //新聞填入
-    $.get("News.txt", function (data) {
+    $.get("設定/News.txt", function (data) {
         //填入文檔位置 : 文章標題
         var title = data.split("\n");
 

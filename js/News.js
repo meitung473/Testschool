@@ -4,7 +4,7 @@ window.onload = function () {
 };
 function LoadNews() {
     //新聞填入
-    $.get("News.txt", function (data) {
+    $.get("設定/News.txt", function (data) {
         //填入文檔位置 : 文章標題
         var title = data.split("\n");
 
@@ -24,23 +24,23 @@ function LoadNews() {
 
             let order = content.indexOf(img, index);
             // let size = order + 1;
-            var sprite =null;
+            var sprite = null;
             if (content[index] === img) {
-                sprite = '<img class="img-fluid rounded my-4' + ' col-' + 8 + ' offset-' + 2 + '" src="' + 'img/News/News' + num + '.jpg" alt="' + title[0] + '"></img>';
+                sprite = '<img class="img-fluid rounded my-4 col-sm-12' + ' col-' + 8 + ' offset-' + 2 + '" src="' + '../img/News/News' + num + '.jpg" alt="' + title[0] + '"></img>';
                 content[index] = content[index].replace(img, sprite);
                 num++;
             }
         }
-        
+
         //尋找是否有列點項
         if (content.includes("*")) {
 
             for (let index = 1; index < content.length; index++) {
 
-                let listfirstat = content.indexOf("*",2*index-1);
+                let listfirstat = content.indexOf("*", 2 * index - 1);
                 content[listfirstat] = '<ul>';
                 content[listfirstat] = content[listfirstat] + '<br>';
-                let listfirend = content.indexOf("*", 2*index);
+                let listfirend = content.indexOf("*", 2 * index);
                 content[listfirend] = '</ul>';
                 //列點項
                 for (listfirstat; listfirstat < listfirend - 1; listfirstat++) {
@@ -51,7 +51,7 @@ function LoadNews() {
             //尋找列點起始
 
         }
-        
+
         document.getElementById('NewsinnerContent').innerHTML = content.join(' <br>');
     });
 }

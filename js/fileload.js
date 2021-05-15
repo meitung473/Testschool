@@ -1,1 +1,3 @@
-window.onload = function () { loadfooter() };
+window.onload = function () { 
+    loadfooter();
+};
