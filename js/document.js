@@ -86,30 +86,6 @@ function loadDoc() {
         else {
             document.getElementById('YTinfo').style.display = 'none';
         }
-        // if (thisarry[FBnum] == " \n") {
-
-        // }
-        // else {
-        //     console.log(thisarry[FBnum + 1] + 'show');
-        // }
-
-        // Infocontent.forEach(lista => {
-        //     let listat=Infocontent.indexOf("*\r");
-        //     Infocontent[listat]='<li>';
-        //     console.log(listat);
-
-        // });
-        // function filterItems(query) {
-        //     return Infocontent.filter(function(el) {
-        //         return el.indexOf("*") > -1;
-        //     })
-        //   }
-        // Infocontent.replace('a','x');
-
-
-
-
-
     });
     //新聞填入
     $.get("News.txt", function (data) {
