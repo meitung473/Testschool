@@ -1,6 +1,7 @@
 window.onload = function () {
-     loadDoc() ;
-     loadfooter();
+   
+    loadfooter();
+    loadDoc();
 };
 function loadDoc() {
 
@@ -37,17 +38,22 @@ function loadDoc() {
 
         //尋找是否有列點項
         if (Infocontent.includes("*")) {
-            //尋找列點起始
-            let listfirstat = Infocontent.indexOf("*");
-            Infocontent[listfirstat] = '<ul>';
-            Infocontent[listfirstat] = Infocontent[listfirstat] + '<br>';
-            let listfirend = Infocontent.indexOf("*", 2);
-            Infocontent[listfirend] = '</ul>';
-            //列點項
-            for (listfirstat; listfirstat < listfirend - 1; listfirstat++) {
 
-                Infocontent[listfirstat + 1] = "<li>" + Infocontent[listfirstat + 1] + "</li>";
+            for (let index = 1; index < Infocontent.length; index++) {
+
+                let listfirstat = Infocontent.indexOf("*",2*index-1);
+                Infocontent[listfirstat] = '<ul>';
+                Infocontent[listfirstat] = Infocontent[listfirstat] + '<br>';
+                let listfirend = Infocontent.indexOf("*", 2*index);
+                Infocontent[listfirend] = '</ul>';
+                //列點項
+                for (listfirstat; listfirstat < listfirend - 1; listfirstat++) {
+
+                    Infocontent[listfirstat + 1] = "<li>" + Infocontent[listfirstat + 1] + "</li>";
+                }
             }
+            //尋找列點起始
+
         }
         document.getElementById('Information ' + 2).innerHTML = Infocontent.join(' ');
     });
