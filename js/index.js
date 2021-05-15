@@ -5,7 +5,7 @@ var myapiKey;
 window.ready = jQuery(function ($) {
 
   //設定文件
-  $.get("Setting.txt", function (data) {
+  $.get("設定/Setting.txt", function (data) {
     let settingarry = data.split("\n");
     for (let index = 0; index < settingarry.length; index++) {
       settingarry[index] = settingarry[index].replace(/^\s+|\s+$/g, '');
