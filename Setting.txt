@@ -18,7 +18,7 @@
 ----------------------------------------------------
 二、學校簡介
 1.歡迎標題:
-Welcome To NCYU
+Welcome To [填寫英文校名]
 
 2.簡介內文:
 National Sun Yat-sen University
@@ -41,18 +41,18 @@ zh.taiwan#holiday@group.v.calendar.google.com
 ----------------------------------------------------
 四、關於我們 資訊欄
 1.電話:
-0960209683
+07-123-456
 2.傳真:
 07-123-456
 3.Email:
-a8870506@gmail.com
+nsysu@mail.nsysu.edu.tw
 4.服務時間:
 Mon.-Fri. 9:00-17:00
 
 ----------------------------------------------------
 五、社群相關連結網址(沒有的話不會顯示)
 1.FB:
-https://www.facebook.com/yanshan.hong1
+https://www.facebook.com/
 2.Instagram:
 https://www.instagram.com/
 3.Youtube:
