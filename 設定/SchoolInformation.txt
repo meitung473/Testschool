@@ -12,9 +12,8 @@ Grade 9 / Grade 10 / Grade 11 / Grade 12 / Other
 
 --------------------------------------------------------------------------------------
 Number of teaching staff & enrollment
-Number of full-time teachers:
-
-Number of students:
+Number of full-time teachers: 數量
+Number of students: 數量
 
 --------------------------------------------------------------------------------------
 Schools types
@@ -22,7 +21,7 @@ Public / Private / National / Other
 
 --------------------------------------------------------------------------------------
 Composition of students
-Boys’ School/Girls’ School/Coeducation/Other
+Boys’ School / Girls’ School / Coeducation / Other
 
 --------------------------------------------------------------------------------------
 Affiliation of schools
@@ -37,7 +36,8 @@ Foreign language programs
 English/French/German/Indonesian/Japanese/Korean/Mandarin/Spanish/Thai/Vietnamese/other
 
 --------------------------------------------------------------------------------------
-Number of overseas sister schools	Total: school(s)
+Number of overseas sister schools
+Total: X school(s)
 There are
 *
 Asia XXX
