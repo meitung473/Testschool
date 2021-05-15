@@ -32,7 +32,7 @@ function loadDoc() {
         Infocontent.join(' <br>');
 
         //尋找是否有列點項
-        if (Infocontent.includes("*\r")) {
+        if (Infocontent.includes("*")) {
             //尋找列點起始
             let listfirstat = Infocontent.indexOf("*");
             Infocontent[listfirstat] = '<ul>';
@@ -64,23 +64,23 @@ function loadDoc() {
         //社群相關連結網址
         //1.FB:
         let FBnum = thisarry.indexOf("1.FB:") + 1;
-        if (thisarry[FBnum] !== "\r") {
+        if (thisarry[FBnum] !== " ") {
             document.getElementById('FBinfo').setAttribute("href", thisarry[FBnum]);
         }
         else {
             document.getElementById('FBinfo').style.display = 'none';
         }
         //2.Instagram:
-        let IGnum = thisarry.indexOf("2.Instagram:\r") + 1;
-        if (thisarry[IGnum] !== "\r") {
+        let IGnum = thisarry.indexOf("2.Instagram:") + 1;
+        if (thisarry[IGnum] !== " ") {
             document.getElementById('IGinfo').setAttribute("href", thisarry[IGnum]);
         }
         else {
             document.getElementById('IGinfo').style.display = 'none';
         }
         //2.Instagram:
-        let YTnum = thisarry.indexOf("3.Youtube:\r") + 1;
-        if (thisarry[YTnum] !== "\r") {
+        let YTnum = thisarry.indexOf("3.Youtube:") + 1;
+        if (thisarry[YTnum] !== " ") {
             document.getElementById('YTinfo').setAttribute("href", thisarry[YTnum]);
         }
         else {
