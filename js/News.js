@@ -20,13 +20,13 @@ function LoadNews() {
         //生成圖片
         var img = "[圖片]";
         
-        for (let index = 1; index < title.length; index++) {
+        for (let index = 1; index < content.length; index++) {
 
             let order = content.indexOf(img,index);
             let size=order+1;
             console.log(content[size]);
             var sprite= '<img class="img-fluid rounded my-4'+' col-'+8+' offset-'+4+'" src="'+'img/News'+'.jpg" alt="'+title[0]+'"></img>';
-            title[index] = title[index].replace(img, sprite);
+            content[index] = content[index].replace(img, sprite);
         }
         console.log(content);
         // //去除空白
