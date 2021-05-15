@@ -19,7 +19,6 @@ function LoadNews() {
 
         //生成圖片
         var img = "[圖片]";
-        
         for (let index = 1; index < content.length; index++) {
 
             let order = content.indexOf(img,index);
