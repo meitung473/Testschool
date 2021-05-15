@@ -26,7 +26,7 @@ function LoadNews() {
             // let size = order + 1;
             var sprite = null;
             if (content[index] === img) {
-                sprite = '<img class="img-fluid rounded my-4 col-sm-12' + ' col-' + 8 + ' offset-' + 2 + '" src="' + '../img/News/News' + num + '.jpg" alt="' + title[0] + '"></img>';
+                sprite = '<img class="img-fluid rounded my-4 col-sm-12' + ' col-' + 8 + ' offset-' + 2 + '" src="' + 'img/News/News' + num + '.jpg" alt="' + title[0] + '"></img>';
                 content[index] = content[index].replace(img, sprite);
                 num++;
             }
