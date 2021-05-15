@@ -10,11 +10,9 @@ window.ready = jQuery(function ($) {
     for (let index = 0; index < settingarry.length; index++) {
       settingarry[index] = settingarry[index].replace(/^\s+|\s+$/g, '');
     }
-    console.log(settingarry);
     //apikey
     let apikeynum = settingarry.indexOf("1.apikey連結:") + 1;
     myapiKey = settingarry[apikeynum];
-    console.log(myapiKey);
     //calendarid
     let calendaridnum = settingarry.indexOf("2.選擇要得行事曆:") + 1;
     mycalendarId = settingarry[calendaridnum];
