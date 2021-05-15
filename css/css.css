@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidebar {
+    margin-left: 12%;
+    margin-top: 3%;
+    padding: 0;
+    width: 200px;
+    background-color: #ffffff;
+    position: fixed;
+    height: fit-content;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    
+  }
+   
+  .sidebar a.active {
+    background-color: #0fc9a4;
+    background-image: linear-gradient(10deg, #40e0d0 0%, #31ccbd 74%);
+    color: white;
+    cursor:auto;
+  }
+
+  .sidebar a.click {
+    border-left: #40e0d0 6px solid;
+    color: black;
+  }
+
+  
+  .sidebar a:hover:not(.active) {
+    border-left: #40e0d0 6px solid;
+    color: rgb(37, 37, 37);
+  }
+  
+  div.content {
+    margin-left: 400px;
+    padding: 1px 8px 8px 8px;
+    height: fit-content;
+    width:1000px;
+  }
+
+  .article{
+    margin-left: 2%;
+    margin-bottom: 2%;
+  }
+
+  .contact{
+    border-left: 2px solid #c5e7e4;
+    border-right: 2px solid #c5e7e4;
+    padding: 30px;
+    margin: auto;
+    background-color: #fff;
+    z-index: -50;
+  }
+  
+  .breadcrumb{
+      width: 100%;
+      height: auto;
+      position: relative;
+      margin-top: 5%;
+      background-color: #e9e9e9;
+      color: white;   
+      border-radius: 0%;
+  }
+
+  .breadcrumb a{
+      color: #195f58;
+  }
+
+  .active{
+     color: white;
+  }
+
+  h2{
+    border-left: #40e0d0 10px solid;
+    padding-left: 10px;
+  }
+
+  .iframe-rwd {
+    position: relative;
+    padding-bottom: 50%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+  .iframe-rwd iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+  .contact-content{
+    border-left: 2px solid #c5e7e4;
+    border-right: 2px solid #c5e7e4;
+    padding: 30px;
+    margin: auto;
+    background-color: #fff;
+  }
+
+  @media screen and (max-width: 600px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;width:400px; margin: 0 auto;}
+    .navbar-toggler{
+      margin-top:-2%;
+    }
+    .navbar-toggler{
+      margin-top:-13%;
+    }
+
+
+  }
+  
+  @media (min-width: 768px) and (max-width: 979px) {
+
+    .sidebar {
+      margin-left: 2%;
+      margin-top: 3%;
+      padding: 0;
+      width: 120px;
+      background-color: #ffffff;
+      position: fixed;
+      height: fit-content;
+      overflow: auto;
+    }
+
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+    .breadcrumb{
+      width: 80%;
+      margin-bottom: 0%;
+    }
+
+    div.content {
+      width:70%;
+      margin-left: 20%;
+    }
+
+  }
