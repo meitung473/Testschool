@@ -1,6 +1,3 @@
-// window.onload = function () {
-//     loadfooter();
-// };
 function loadfooter() {
     $.get("設定/Setting.txt", function (data) {
         let thisarry = data.split("\n");
