@@ -4,9 +4,11 @@ function loadDoc() {
 
     $.get("Setting.txt", function (data) {
         let thisarry = data.split("\n");
-        console.log(thisarry);
-        //title
-        var schooltitle = thisarry.indexOf("0.顯示標題:")+1;
+
+        for (let index = 0; index < thisarry.length; index++) {
+            thisarry[index]=thisarry[index].replace(/^\s+|\s+$/g, '');
+        }
+        var schooltitle = thisarry.indexOf("0.顯示標題:") + 1;
         console.log(schooltitle);
         document.title = thisarry[schooltitle];
 
@@ -107,3 +109,10 @@ function loadDoc() {
     });
 
 }
+// function convertJson() {
+//     $.get("Setting.txt", function (data) {
+//         data.split('\n').map(function (el) {
+//              return el.split(/\s+/); });
+//     });
+// }
+
