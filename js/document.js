@@ -2,7 +2,7 @@ window.onload = function () { loadDoc() };
 
 function loadDoc() {
 
-    $.get("Setting.txt", function (data) {
+    $.get("設定/Setting.txt", function (data) {
         let thisarry = data.split("\n");
 
         for (let index = 0; index < thisarry.length; index++) {
