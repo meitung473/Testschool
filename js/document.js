@@ -14,7 +14,7 @@ function loadDoc() {
         let picTITLE1 = thisarry.indexOf("1.輪播標題1:") + 1;
         document.getElementById('pictxt ' + 1).innerHTML = thisarry[picTITLE1];
         document.getElementById('picsen ' + 1).innerHTML = thisarry[picTITLE1 + 1];
-
+        console.log(picTITLE1);
         let picTITLE2 = thisarry.indexOf("2.輪播標題2:") + 1;
         document.getElementById('pictxt ' + 2).innerHTML = thisarry[picTITLE2];
         document.getElementById('picsen ' + 2).innerHTML = thisarry[picTITLE2 + 1];
