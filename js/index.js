@@ -8,11 +8,11 @@ window.ready = jQuery(function ($) {
   $.get("Setting.txt", function (data) {
     let settingarry = data.split("\n");
     //apikey
-    let apikeynum = settingarry.indexOf("1.帳號連結:\r") + 1;
-    myapiKey = settingarry[apikeynum];
+    let apikeynum = settingarry.indexOf("1.apikey連結:") + 1;
+    myapiKey = settingarry[apikeynum].replace(/^\s+|\s+$/g, '');
     //calendarid
-    let calendaridnum = settingarry.indexOf("2.選擇要得行事曆:\r") + 1;
-    mycalendarId = settingarry[calendaridnum];
+    let calendaridnum = settingarry.indexOf("2.選擇要得行事曆:") + 1;
+    mycalendarId = settingarry[calendaridnum].replace(/^\s+|\s+$/g, '');
     
     //get id apikey
     $('#eventlist').gCalReader({

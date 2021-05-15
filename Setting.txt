@@ -32,7 +32,7 @@ NSYSU was established in 1980 by the Ministry of Education as a leading comprehe
 
 ----------------------------------------------------
 三、行事曆
-1.帳號連結:
+1.apikey連結:
 AIzaSyB3qbt68qB-rCEl5VQchJagEeSzP0uJgFk
 
 2.選擇要得行事曆:
