@@ -21,7 +21,7 @@ function loadfooter() {
         //社群相關連結網址
         //1.FB:
         let FBnum = thisarry.indexOf("1.FB:") + 1;
-        if (thisarry[FBnum] !== " ") {
+        if (thisarry[FBnum] !== "") {
             document.getElementById('FBinfo').setAttribute("href", thisarry[FBnum]);
         }
         else {
@@ -29,15 +29,15 @@ function loadfooter() {
         }
         //2.Instagram:
         let IGnum = thisarry.indexOf("2.Instagram:") + 1;
-        if (thisarry[IGnum] !== " ") {
+        if (thisarry[IGnum] !== "") {
             document.getElementById('IGinfo').setAttribute("href", thisarry[IGnum]);
         }
         else {
             document.getElementById('IGinfo').style.display = 'none';
         }
-        //2.Instagram:
+        //2.Youtube:
         let YTnum = thisarry.indexOf("3.Youtube:") + 1;
-        if (thisarry[YTnum] !== " ") {
+        if (thisarry[YTnum] !== "") {
             document.getElementById('YTinfo').setAttribute("href", thisarry[YTnum]);
         }
         else {

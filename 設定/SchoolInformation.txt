@@ -1,5 +1,5 @@
 The full name of school
-Nation Chaiyi University
+[學校英文全名]
 
 --------------------------------------------------------------------------------------
 School level	
@@ -45,3 +45,6 @@ Europe XXX
 America XXX
 Africa XXX
 *
+fdsfds
+fdsfds
+---------------------------------
