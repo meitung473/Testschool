@@ -6,7 +6,7 @@ function loadDoc() {
         let thisarry = data.split("\n");
         console.log(thisarry);
         //title
-        var schooltitle = thisarry.indexOf("0.顯示標題:\r")+1;
+        var schooltitle = thisarry.indexOf("0.顯示標題:")+1;
         console.log(schooltitle);
         document.title = thisarry[schooltitle];
 
