@@ -11,33 +11,33 @@ function loadDoc() {
         document.title = thisarry[schooltitle];
 
         //輪播照片:標題
-        let picTITLE1 = thisarry.indexOf("1.輪播標題1:\r") + 1;
+        let picTITLE1 = thisarry.indexOf("1.輪播標題1:") + 1;
         document.getElementById('pictxt ' + 1).innerHTML = thisarry[picTITLE1];
         document.getElementById('picsen ' + 1).innerHTML = thisarry[picTITLE1 + 1];
 
-        let picTITLE2 = thisarry.indexOf("2.輪播標題2:\r") + 1;
+        let picTITLE2 = thisarry.indexOf("2.輪播標題2:") + 1;
         document.getElementById('pictxt ' + 2).innerHTML = thisarry[picTITLE2];
         document.getElementById('picsen ' + 2).innerHTML = thisarry[picTITLE2 + 1];
-        let picTITLE3 = thisarry.indexOf("3.輪播標題3:\r") + 1;
+        let picTITLE3 = thisarry.indexOf("3.輪播標題3:") + 1;
         document.getElementById('pictxt ' + 3).innerHTML = thisarry[picTITLE3];
         document.getElementById('picsen ' + 3).innerHTML = thisarry[picTITLE3 + 1];
         //簡介標題
-        let InformationTITLE = thisarry.indexOf("1.歡迎標題:\r") + 1;
+        let InformationTITLE = thisarry.indexOf("1.歡迎標題:") + 1;
         document.getElementById('Information ' + 1).innerHTML = thisarry[InformationTITLE];
 
         //簡介內文
-        let CONTENTstart = thisarry.indexOf("2.簡介內文:\r") + 1;
-        let CONTENTend = thisarry.indexOf("三、行事曆\r") - 1;
+        let CONTENTstart = thisarry.indexOf("2.簡介內文:") + 1;
+        let CONTENTend = thisarry.indexOf("三、行事曆") - 1;
         var Infocontent = thisarry.slice(CONTENTstart, CONTENTend);
         Infocontent.join(' <br>');
 
         //尋找是否有列點項
         if (Infocontent.includes("*\r")) {
             //尋找列點起始
-            let listfirstat = Infocontent.indexOf("*\r");
+            let listfirstat = Infocontent.indexOf("*");
             Infocontent[listfirstat] = '<ul>';
             Infocontent[listfirstat] = Infocontent[listfirstat] + '<br>';
-            let listfirend = Infocontent.indexOf("*\r", 2);
+            let listfirend = Infocontent.indexOf("*", 2);
             Infocontent[listfirend] = '</ul>';
             //列點項
             for (listfirstat; listfirstat < listfirend - 1; listfirstat++) {
@@ -49,21 +49,21 @@ function loadDoc() {
 
         //關於我們 資訊欄
         // 1.電話:
-        let telenum = thisarry.indexOf("1.電話:\r") + 1;
+        let telenum = thisarry.indexOf("1.電話:") + 1;
         document.getElementById('telephonenum').innerHTML = 'Tel：' + thisarry[telenum];
         // 2.傳真:
-        let Faxnum = thisarry.indexOf("2.傳真:\r") + 1;
+        let Faxnum = thisarry.indexOf("2.傳真:") + 1;
         document.getElementById('Faxnum').innerHTML = 'Fax：' + thisarry[Faxnum];
         // 3.Email:
-        let Emailnum = thisarry.indexOf("3.Email:\r") + 1;
+        let Emailnum = thisarry.indexOf("3.Email:") + 1;
         document.getElementById('Emailnum').innerHTML = 'Email：' + thisarry[Emailnum];
         // 4.服務時間:
-        let Servicetime = thisarry.indexOf("4.服務時間:\r") + 1;
+        let Servicetime = thisarry.indexOf("4.服務時間:") + 1;
         document.getElementById('Servicetime').innerHTML = 'Service：' + thisarry[Servicetime];
 
         //社群相關連結網址
         //1.FB:
-        let FBnum = thisarry.indexOf("1.FB:\r") + 1;
+        let FBnum = thisarry.indexOf("1.FB:") + 1;
         if (thisarry[FBnum] !== "\r") {
             document.getElementById('FBinfo').setAttribute("href", thisarry[FBnum]);
         }
