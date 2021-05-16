@@ -3,7 +3,15 @@ window.onload = function () {
     Loadinfo();
 };
 function Loadinfo() {
-    //新聞填入
+    $.get("設定/Setting.txt", function (data) {
+        let thisarry = data.split("\n");
+        for (let index = 0; index < thisarry.length; index++) {
+            thisarry[index] = thisarry[index].replace(/^\s+|\s+$/g, '');
+        }
+        var breadtitle = thisarry.indexOf("0.顯示標題:") + 1;
+        document.getElementById('sidebarname').innerHTML = 'About '+thisarry[breadtitle];
+    });
+  
     $.get("設定/SchoolInformation.txt", function (data) {
         //填入文檔位置 : 文章標題
         var title = data.split("\n");

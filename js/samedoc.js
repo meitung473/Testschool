@@ -6,6 +6,8 @@ function loadfooter() {
         for (let index = 0; index < thisarry.length; index++) {
             thisarry[index] = thisarry[index].replace(/^\s+|\s+$/g, '');
         }
+        // var schooltitle = thisarry.indexOf("0.顯示標題:") + 1;
+        // document.title = thisarry[schooltitle];
         //關於我們 資訊欄
         // 1.電話:
         let telenum = thisarry.indexOf("1.電話:") + 1;

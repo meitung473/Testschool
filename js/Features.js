@@ -3,11 +3,19 @@ window.onload = function () {
     LoadFeatures();
 };
 function LoadFeatures() {
+    $.get("設定/Setting.txt", function (data) {
+        let thisarry = data.split("\n");
+        for (let index = 0; index < thisarry.length; index++) {
+            thisarry[index] = thisarry[index].replace(/^\s+|\s+$/g, '');
+        }
+        var breadtitle = thisarry.indexOf("0.顯示標題:") + 1;
+        document.getElementById('sidebarname').innerHTML = 'About '+thisarry[breadtitle];
+    });
     $.get("設定/Features.txt", function (data) {
         //填入文檔位置 
+        // data.unshift('<p>');
         var content = data.split("\n");
-       
-        // content.push('<p>');
+        content.unshift('<p>');
         for (let index = 0; index < content.length; index++) {
             content[index] = content[index].replace(/^\s+|\s+$/g, '');
         }
@@ -44,7 +52,7 @@ function LoadFeatures() {
         }
         //消除空白欄
         //   content = content.filter(item => item);
-        content.unshift('<p>');
+        // content.unshift(' <p>');
         document.getElementById('content').innerHTML = content.join(' </br>');
     });
 
