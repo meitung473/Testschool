@@ -9,11 +9,10 @@
   <meta name="author" content="">
 
   <title>Contact</title>
-  <script type="text/javascript" src="js/samedoc.js"></script>
-  <script type="text/javascript" src="js/fileload.js"></script>
+
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+  <script type="text/javascript" src="js/samedoc.js"></script>
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
   <link href="css/css.css" rel="stylesheet">
@@ -46,7 +45,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about-1.html">Organization</a>
+            <a class="nav-link" href="Organization.html">Organization</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -93,18 +92,21 @@
         <!-- Map Column -->
         <div class="col-lg-8 mb-4">
           <!-- Embedded Google Map -->
-          <div class="iframe-rwd"><iframe
+          <div class="iframe-rwd" id="map">
+            <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14730.728940511628!2d120.2647299!3d22.6283384!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdf976ed7fa8cba08!2z5ZyL56uL5Lit5bGx5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1614318324167!5m2!1szh-TW!2stw"
-              width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> </div>
+              width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" >
+            </iframe>
+          </div>
         </div>
         <!-- Contact Details Column -->
         <div class="col-lg-4 mb-4">
           <h2>Contact Us</h2>
           <p style="line-height: 36px;">
-            <span id="telephonenum C">Tel：</span><br>
-            <span id="Faxnum C">Fax：</span><br>
-            <span id="Emailnum C">Email：</span><br>
-            <span id="Servicetime C">Service：</span>
+            <span id="telephonenumC">Tel：</span><br>
+            <span id="FaxnumC">Fax：</span><br>
+            <span id="EmailnumC">Email：</span><br>
+            <span id="ServicetimeC">Service：</span>
           <p>
             <!-- <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM -->
           </p>
@@ -113,7 +115,9 @@
       <hr><br>
       <div class="article-contact">
         <h2>School location</h2><br>
-        <p>How to get to NSYSU?</p>
+        <p id="location"></p>
+        <p id="HTGTS"></p>
+        <!-- <p id="HTGTS">How to get to NSYSU?</p>
         <li>Approximately 25~30 minutes from Kaohsiung International Airport by car.</li>
         <li>Approximately 15~20 minutes from Kaohsiung Train Station by car.</li>
         <li>Approximately 20~25 minutes from Taiwan High Speed Rail Zuoying Station.</li>
@@ -124,7 +128,7 @@
           2. By bus:Take the No. 99 or the No. 248 bus from Kaohsiung Train Station and get off at the NSYSU University
           stop in front of the tunnel.<br>
           3. By High Speed Rail:Disembark at Zuoying Station, take the “High Speed Rail Gushang” transit bus and get off
-          at the NSYSU University stop. High Speed Rail website.</p>
+          at the NSYSU University stop. High Speed Rail website.</p> -->
       </div>
       <!-- /.row -->
       <br>
@@ -197,13 +201,13 @@
         <div class="col-12 col-md-4">
           <h3 class="text-white" style=" border-left: #ffffff 10px solid;padding-left: 5px;">Links</h3>
           <div class="social" style="margin-top: 55px;">
-            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+            <a href="https://www.facebook.com/" id="FBinfo" target="_blank" title="Facebook">
               <div class="col-12 col-md-4" style="display: inline;"><img src="img/icon/facebook.png" alt=""></div>
             </a>
-            <a href="https://www.youtube.com/" target="_blank" title="Instagram">
+            <a href="https://www.youtube.com/" id="IGinfo" target="_blank" title="Instagram">
               <div class="col-12 col-md-4" style="display: inline;"><img src="img/icon/instagram.png" alt=""></div>
             </a>
-            <a href="https://www.youtube.com/" target="_blank" title="Youtube">
+            <a href="https://www.youtube.com/" id="YTinfo" target="_blank" title="Youtube">
               <div class="col-12 col-md-4" style="display: inline;"><img src="img/icon/youtube.png" alt=""></div>
             </a>
           </div>

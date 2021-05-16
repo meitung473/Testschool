@@ -66,6 +66,7 @@ function Loadinfo() {
                 }
             }
         }
+        //這邊有問題
         var osssC = title.slice(OSS, -1);
         console.log(osssC);
         // osssC.splice(3,'<br>');

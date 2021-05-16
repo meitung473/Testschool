@@ -31,7 +31,6 @@ function LoadNews() {
                 num++;
             }
         }
-
         //尋找是否有列點項
         if (content.includes("*")) {
 
@@ -48,8 +47,6 @@ function LoadNews() {
                     content[listfirstat + 1] = "<li>" + content[listfirstat + 1] + "</li>";
                 }
             }
-            //尋找列點起始
-
         }
 
         document.getElementById('NewsinnerContent').innerHTML = content.join(' <br>');
