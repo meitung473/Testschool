@@ -76,19 +76,9 @@ function Loadinfo() {
                 }
             }
         }
-
-
-
-       
         var osssC = title.slice(OSS, -1);
-
-
-        // for (let index = 0; index < osssC.length; index++) {
-        //     osssC[index] = osssC[index].replace(/^\s+|\s+$/g, '');
-        // }
         console.log(osssC);
         osssC = osssC.filter(item => item);
-
         document.getElementById('SchoolOSS').innerHTML = osssC.join('');
     });
 }
