@@ -110,8 +110,8 @@ function LoadContact() {
     for (let index = 0; index < content.length; index++) {
       content[index] = content[index].replace(/^\s+|\s+$/g, '');
     }
-  
-    let mapnum = content.indexOf("[SchoolMap]")+1;
+
+    let mapnum = content.indexOf("[SchoolMap]") + 1;
     document.getElementById('map').innerHTML = content[mapnum];
 
     let location = content.indexOf("[School location]") + 1;
@@ -119,22 +119,6 @@ function LoadContact() {
     let article = location + 1;
 
     content = content.slice(article, -1);
-    for (let index = 0; index < content.length; index++) {
-
-      if (content.includes("*")) {
-        var list = content.indexOf("*", index);
-        content[list] = '<ul>';
-        var liend = content.indexOf("*", index);
-        content[liend] = '</ul>';
-        //列點項
-        for (list; list < liend - 1; list++) {
-          content[list + 1] = "<li>" + content[list + 1] + "</li>";
-        }
-
-      }
-
-    }
-    //生成圖片
     var img = "[圖片]";
     var num = 1;
     for (let index = 0; index < content.length; index++) {
@@ -143,13 +127,42 @@ function LoadContact() {
       // let size = order + 1;
       var sprite = null;
       if (content[index] === img) {
-        sprite = '<img class="img-fluid rounded my-4 col-sm-12' + ' col-xl-' + 8 + ' offset-xl-' + 2 + '" src="' + 'img/Contactus-img/Contact' + num + '.jpg" alt=""></img>';
+        sprite = '<div class="col-xl-2"></div><img class="img-fluid rounded my-4 col-sm-12' + ' col-xl-' + 8 + ' offset-xl-' + 2 + '" src="' + 'img/Contactus-img/Contact' + num + '.jpg" alt=""></img>';
         content[index] = content[index].replace(img, sprite);
         num++;
       }
     }
-    content = content.filter(item => item);
-    document.getElementById('HTGTS').innerHTML = content.join(' </br>');
+    if (content.includes("*")) {
+
+      for (let index = 0; index < content.length; index++) {
+
+        let listfirstat = content.indexOf("*", index);
+        content[listfirstat] = '<ul>';
+        content[listfirstat] = content[listfirstat];
+        let listfirend = content.indexOf("*", index);
+        content[listfirend] = '</ul>';
+        //列點項
+        for (listfirstat; listfirstat < listfirend - 1; listfirstat++) {
+
+          content[listfirstat + 1] = "<li>" + content[listfirstat + 1] + "</li>";
+        }
+        if (!content[index].includes("ul") && !content[index].includes("li")) {
+          content[index] += '<br>';
+        }
+        //新標題
+        content[index] = content[index].replace("{", '<h2>');
+        content[index] = content[index].replace("}", '</h2>');
+      }
+      document.getElementById('HTGTS').innerHTML = content.join('');
+    }
+    else {
+      for (let index = 0; index < content.length; index++) {
+        //新標題
+        content[index] = content[index].replace("{", '<h2>');
+        content[index] = content[index].replace("}", '</h2>');
+      }
+      document.getElementById('HTGTS').innerHTML = content.join('<br>');
+    }
   });
 
 }

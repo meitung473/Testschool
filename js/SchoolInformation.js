@@ -9,9 +9,9 @@ function Loadinfo() {
             thisarry[index] = thisarry[index].replace(/^\s+|\s+$/g, '');
         }
         var breadtitle = thisarry.indexOf("0.顯示標題:") + 1;
-        document.getElementById('sidebarname').innerHTML = 'About '+thisarry[breadtitle];
+        document.getElementById('sidebarname').innerHTML = 'About ' + thisarry[breadtitle];
     });
-  
+
     $.get("設定/SchoolInformation.txt", function (data) {
         //填入文檔位置 : 文章標題
         var title = data.split("\n");
@@ -61,7 +61,9 @@ function Loadinfo() {
         if (title.includes("*")) {
 
             for (let index = 1; index < title.length; index++) {
-
+                if (!title[index].includes("ul") && !title[index].includes("li")) {
+                    title[index] += '<br>';
+                }
                 let listfirstat = title.indexOf("*", 2 * index - 1);
                 title[listfirstat] = '<ul>';
                 title[listfirstat] = title[listfirstat];
@@ -74,14 +76,19 @@ function Loadinfo() {
                 }
             }
         }
-        //這邊有問題
+
+
+
+       
         var osssC = title.slice(OSS, -1);
-        console.log(osssC);
-        // osssC.splice(3,'<br>');
+
+
         // for (let index = 0; index < osssC.length; index++) {
         //     osssC[index] = osssC[index].replace(/^\s+|\s+$/g, '');
         // }
-        
+        console.log(osssC);
+        osssC = osssC.filter(item => item);
+
         document.getElementById('SchoolOSS').innerHTML = osssC.join('');
     });
 }

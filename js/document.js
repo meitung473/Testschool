@@ -34,28 +34,38 @@ function loadDoc() {
         let CONTENTstart = thisarry.indexOf("2.簡介內文:") + 1;
         let CONTENTend = thisarry.indexOf("三、行事曆") - 1;
         var Infocontent = thisarry.slice(CONTENTstart, CONTENTend);
-        Infocontent.join(' <br>');
-
-        //尋找是否有列點項
+        // Infocontent.join(' <br>');
         if (Infocontent.includes("*")) {
 
-            for (let index = 1; index < Infocontent.length; index++) {
-
-                let listfirstat = Infocontent.indexOf("*",2*index-1);
-                Infocontent[listfirstat] = '<ul>';
-                Infocontent[listfirstat] = Infocontent[listfirstat] + '<br>';
-                let listfirend = Infocontent.indexOf("*", 2*index);
-                Infocontent[listfirend] = '</ul>';
-                //列點項
-                for (listfirstat; listfirstat < listfirend - 1; listfirstat++) {
-
-                    Infocontent[listfirstat + 1] = "<li>" + Infocontent[listfirstat + 1] + "</li>";
-                }
+            for (let index = 0; index < Infocontent.length; index++) {
+      
+              let listfirstat = Infocontent.indexOf("*", index);
+              Infocontent[listfirstat] = '<ul>';
+              Infocontent[listfirstat] = Infocontent[listfirstat];
+              let listfirend = Infocontent.indexOf("*", index);
+              Infocontent[listfirend] = '</ul>';
+              //列點項
+              for (listfirstat; listfirstat < listfirend - 1; listfirstat++) {
+      
+                Infocontent[listfirstat + 1] = "<li>" + Infocontent[listfirstat + 1] + "</li>";
+              }
+              if (!Infocontent[index].includes("ul") && !Infocontent[index].includes("li")) {
+                Infocontent[index] += '<br>';
+              }
+              //新標題
+              Infocontent[index] = Infocontent[index].replace("{", '<h2>');
+              Infocontent[index] = Infocontent[index].replace("}", '</h2>');
             }
-            //尋找列點起始
-
-        }
-        document.getElementById('Information ' + 2).innerHTML = Infocontent.join(' ');
+            document.getElementById('Information ' + 2).innerHTML = Infocontent.join('');
+          }
+          else {
+            for (let index = 0; index < Infocontent.length; index++) {
+              //新標題
+              Infocontent[index] = Infocontent[index].replace("{", '<h2>');
+              Infocontent[index] = Infocontent[index].replace("}", '</h2>');
+            }
+            document.getElementById('Information ' + 2).innerHTML = Infocontent.join('<br>');
+          }
     });
     //新聞填入
     $.get("設定/News.txt", function (data) {
