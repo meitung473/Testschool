@@ -5,7 +5,7 @@ window.onload = function () {
 };
 function loadDoc() {
 
-    $.get("設定/Setting.txt", function (data) {
+    $.get("Setting.txt", function (data) {
         let thisarry = data.split("\n");
 
         for (let index = 0; index < thisarry.length; index++) {
@@ -68,7 +68,7 @@ function loadDoc() {
           }
     });
     //新聞填入
-    $.get("設定/News.txt", function (data) {
+    $.get("News.txt", function (data) {
         //填入文檔位置 : 文章標題
         var title = data.split("\n");
 

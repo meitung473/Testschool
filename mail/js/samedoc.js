@@ -1,12 +1,6 @@
-// fetch('Setting.txt')
-// .then(response => response.text())
-// .then(data => {
-//     // Do something with your data
-//     console.log(data);
-// });
+
 
 function loadfooter() {
-   
     $.get("Setting.txt", function (data) {
         let thisarry = data.split("\n");
         for (let index = 0; index < thisarry.length; index++) {
@@ -18,19 +12,19 @@ function loadfooter() {
         // 1.電話:
         let telenum = thisarry.indexOf("1.電話:") + 1;
         document.getElementById('telephonenum').innerHTML = 'Tel：' + thisarry[telenum];
-        tele = 'Tel：' + thisarry[telenum];
+        tele='Tel：' + thisarry[telenum];
         // 2.傳真:
         let Faxnum = thisarry.indexOf("2.傳真:") + 1;
         document.getElementById('Faxnum').innerHTML = 'Fax：' + thisarry[Faxnum];
-        Fax = 'Fax：' + thisarry[Faxnum];
+        Fax='Fax：' + thisarry[Faxnum];
         // 3.Email:
         let Emailnum = thisarry.indexOf("3.Email:") + 1;
         document.getElementById('Emailnum').innerHTML = 'Email：' + thisarry[Emailnum];
-        Email = 'Email：' + thisarry[Emailnum]
+        Email='Email：' + thisarry[Emailnum]
         // 4.服務時間:
         let Servicetime = thisarry.indexOf("4.服務時間:") + 1;
         document.getElementById('Servicetime').innerHTML = 'Service：' + thisarry[Servicetime];
-        ServiceT = 'Service：' + thisarry[Servicetime];
+        ServiceT='Service：' + thisarry[Servicetime];
 
         //社群相關連結網址
         //1.FB:
